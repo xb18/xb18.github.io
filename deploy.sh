@@ -24,5 +24,5 @@ git push -f https://github.com/xb18/xb18.github.io.git master:gh-pages
 cd -
 
 git add -A
-git commit -m 'post'
+git commit -m 'new post'
 git push -f https://github.com/xb18/xb18.github.io.git master
