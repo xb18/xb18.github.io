@@ -3,10 +3,6 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-git add -A
-git commit -m 'post'
-git push -f https://github.com/xb18/xb18.github.io.git master
-
 # 进入生成的文件夹
 cd blog/.vuepress/dist
 
@@ -26,3 +22,7 @@ git push -f https://github.com/xb18/xb18.github.io.git master:gh-pages
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+
+git add -A
+git commit -m 'post'
+git push -f https://github.com/xb18/xb18.github.io.git master
