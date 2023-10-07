@@ -24,26 +24,26 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xb18.github.io/images/image-20230902194049379.png">
     
-<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
-<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+<link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696644831978">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696668721501">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696644831978">
+    <link rel="stylesheet" href="/css/style.css?v=1696668721501">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696644831978">
+            <link rel="stylesheet" href="/custom.css?v=1696668721501">
         
     
 
     
-<script src="/lib/mdui_043tiny/mdui.js" async></script>
-<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/mdui-v1.0.1/js/mdui.js" async></script>
+<script src="/lib/medium-zoom/medium-zoom.js" async></script>
+<script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696644831978"></script>
+    <script async src="/js/app.js?v=1696668721501"></script>
     
      
 
@@ -136,11 +136,11 @@
           </li>
         
           <li>
-            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
+            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
           </li>
         
           <li>
-            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
+            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
           </li>
         
           <li>
@@ -194,7 +194,7 @@
 <h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><p>时间分片，将十万个数据拆成多个页，每次渲染时插入一页，降低一次性插入大量数据的这个情况</p>
 <p>setTimeout</p>
 <p>requestAnimationFrame用于在下一次浏览器<strong>重绘之前</strong>调用指定函数的方法</p>
-<h2 id="虚拟列表"><a href="#虚拟列表" class="headerlink" title="虚拟列表"></a>虚拟列表</h2><p><img src="/../images/image-20230902194049379.png" alt="image-20230902194049379"></p>
+<h2 id="虚拟列表"><a href="#虚拟列表" class="headerlink" title="虚拟列表"></a>虚拟列表</h2><p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230902194049379.png" alt="image-20230902194049379" data-caption="image-20230902194049379" class="lazyload"></p>
 <p>当我们滚动到一个元素离开可视区范围内时，就去掉上缓冲区顶上的一个元素，然后再下缓冲区增加一个元素。这就是虚拟列表的核心原理了</p>
 <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7232856799170805820">https://juejin.cn/post/7232856799170805820</a></p>
 
@@ -222,11 +222,14 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696644831938"></script>
+    <script async src="/js/copy-codeblock.js?v=1696668721450"></script>
   
 
   
 </div>
+<script>
+  mediumZoom('[data-zoomable]');
+</script>
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">

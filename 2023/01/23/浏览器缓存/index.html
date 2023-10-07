@@ -26,26 +26,26 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xb18.github.io/images/image-20230902181915789.png">
     
-<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
-<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+<link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696644831976">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696668721499">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696644831976">
+    <link rel="stylesheet" href="/css/style.css?v=1696668721499">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696644831976">
+            <link rel="stylesheet" href="/custom.css?v=1696668721499">
         
     
 
     
-<script src="/lib/mdui_043tiny/mdui.js" async></script>
-<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/mdui-v1.0.1/js/mdui.js" async></script>
+<script src="/lib/medium-zoom/medium-zoom.js" async></script>
+<script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696644831976"></script>
+    <script async src="/js/app.js?v=1696668721499"></script>
     
      
 
@@ -138,11 +138,11 @@
           </li>
         
           <li>
-            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
+            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
           </li>
         
           <li>
-            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
+            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
           </li>
         
           <li>
@@ -223,14 +223,14 @@
 <h3 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h3><p>强缓存除了使用<code>Cache-Control</code>实现之外，还可以使用<code>Expires</code>字段，<code>Expires</code>是Http1.0规范，<code>Cache-Control</code>是Http1.1规范，<code>Expires</code>返回一个具体的时间值，代表缓存的有效期，在该日期内浏览器不会向服务器发起请求，而是直接从缓存里获取资源。</p>
 <p>因为<code>Expires</code>参照的是本地客户端的时间，而客户端的时间是可以被修改的，所以会有误差产生的情况，这也是<code>Expires</code>的一个缺点，所以有了后来Http1.1规范的<code>Cache-control</code></p>
 <p><code>Cache-control</code>的优先级要高于<code>Expires</code>，如果两者同时设置，会优先使用<code>Cache-control</code>而忽略掉Expires。</p>
-<p><img src="/../images/image-20230902181915789.png" alt="image-20230902181915789"></p>
+<p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230902181915789.png" alt="image-20230902181915789" data-caption="image-20230902181915789" class="lazyload"></p>
 <h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h2><h3 id="Etag"><a href="#Etag" class="headerlink" title="Etag"></a>Etag</h3><p>协商缓存是由服务器来确定缓存资源是否可用。 主要涉及到两对属性字段，都是成对出现的，即第一次请求的响应头带上某个字, Last-Modified 或者 Etag，则后续请求则会带上对应的请求字段 If-Modified-Since或者 If-None-Match，若响应头没有 Last-Modified 或者 Etag 字段，则请求头也不会有对应的字段。</p>
 <p>未命中强缓存时，需访问服务器确认当前浏览器的缓存是否过期，若未过期则直接读取，返回 304</p>
 <p>例如：浏览器初次请求资源，服务器返回资源，同时生成一个Etag值携带在响应头里返回给浏览器，当浏览器再次请求资源时会在请求头里携带If-None-Match，值是之前服务器返回的Etag的值，服务器收到之后拿该值与资源文件最新的Etag值做对比。</p>
 <h3 id="Last-Modified"><a href="#Last-Modified" class="headerlink" title="Last-Modified"></a>Last-Modified</h3><p>除了Etag外，还有一个Last-Modified的属性，它是Http1.0规范的，服务器返回Last-Modified，浏览器请求头对应携带的是If-Modified-since，与Etag不同的是，Last-Modified的值是一个时间值，代表文件的修改时间，服务器通过对比文件的修改时间是否发生改变来判断是否使用缓存</p>
 <p>相比<code>Last-Modified</code>，<code>Etag</code>优先级更高，使用上也更精确一些，因为有时候会存在文件内容并没有改变，但文件的修改时间变更了，<code>Last-Modified</code>不一致所以服务器会重新返回资源文件，实际上还是可以继续使用缓存的。</p>
-<p><img src="/../images/image-20230902185647767.png" alt="image-20230902185647767"></p>
-<p><img src="/../images/image-20230902185703433.png" alt="image-20230902185703433"></p>
+<p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230902185647767.png" alt="image-20230902185647767" data-caption="image-20230902185647767" class="lazyload"></p>
+<p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230902185703433.png" alt="image-20230902185703433" data-caption="image-20230902185703433" class="lazyload"></p>
 <h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>强缓存优先级大于协商缓存，即两者同时存在时，如果强缓存开启且在有效期内，则不会走协商缓存。</p>
 
     <span></span>
@@ -257,11 +257,14 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696644831938"></script>
+    <script async src="/js/copy-codeblock.js?v=1696668721449"></script>
   
 
   
 </div>
+<script>
+  mediumZoom('[data-zoomable]');
+</script>
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">

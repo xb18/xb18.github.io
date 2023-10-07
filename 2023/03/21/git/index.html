@@ -24,26 +24,26 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xb18.github.io/images/image-20230903233755265.png">
     
-<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
-<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+<link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696644831970">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696668721492">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696644831970">
+    <link rel="stylesheet" href="/css/style.css?v=1696668721492">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696644831970">
+            <link rel="stylesheet" href="/custom.css?v=1696668721492">
         
     
 
     
-<script src="/lib/mdui_043tiny/mdui.js" async></script>
-<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/mdui-v1.0.1/js/mdui.js" async></script>
+<script src="/lib/medium-zoom/medium-zoom.js" async></script>
+<script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696644831970"></script>
+    <script async src="/js/app.js?v=1696668721492"></script>
     
      
 
@@ -136,11 +136,11 @@
           </li>
         
           <li>
-            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
+            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
           </li>
         
           <li>
-            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
+            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
           </li>
         
           <li>
@@ -189,7 +189,7 @@
     
     
 </div>
-    <p><img src="/../images/image-20230903233755265.png" alt="image-20230903233755265"></p>
+    <p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230903233755265.png" alt="image-20230903233755265" data-caption="image-20230903233755265" class="lazyload"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置  local仓库级别 、global用户级别</span></span><br><span class="line">git config --global user.name <span class="string">&quot;xb18&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;450010494@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">…or create a new repository on the <span class="built_in">command</span> line</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# bot-pc&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:xb18/bot-pc.git</span><br><span class="line">git push -u origin main</span><br><span class="line">…or push an existing repository from the <span class="built_in">command</span> line</span><br><span class="line">git remote add origin git@github.com:xb18/bot-pc.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br><span class="line"></span><br><span class="line">git remote show origin</span><br><span class="line">git remote <span class="built_in">rm</span> name</span><br><span class="line">git <span class="built_in">rm</span> --cached <span class="built_in">dirname</span> // --cached暂存区删除，工作区不删除</span><br></pre></td></tr></table></figure>
 
 
@@ -217,11 +217,14 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696644831935"></script>
+    <script async src="/js/copy-codeblock.js?v=1696668721447"></script>
   
 
   
 </div>
+<script>
+  mediumZoom('[data-zoomable]');
+</script>
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">
