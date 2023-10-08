@@ -4,34 +4,37 @@
 
 <head>
     
-    <title>call、bind、apply - 鹿酱小窝</title>
+    <title>clientWidth-offsetHeight - 鹿酱小窝</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/images/default/53945606.jpg" type="image/png" />
-    <meta name="description" content="bind是返回对应函数，便于稍后调用；apply、call则是立即调用  bind、call传入多个参数，apply传入参数数组   123obj.myFun.call(db,&amp;#x27;成都&amp;#x27;,&amp;#x27;上海&amp;#x27;)；　　　　 &#x2F;&#x2F; 德玛 年龄 99  来自 成都去往上海obj.myFun.bind(db,&amp;#x27;成都&amp;#x27;,&amp;#x27;上海&amp;#x27;)();">
+    <meta name="description" content="clientWidth clientWidth 属性是一个只读属性，它返回该元素的像素宽度，宽度包含内边距（padding），不包含边框（border），外边距（margin）和滚动条，是一个整数，单位是像素 px。 内联元素以及没有 CSS 样式的元素的 clientWidth 属性值为 0。  offsetHeight  offsetHeight 和 offsettWidth 属性返回元素的可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="call、bind、apply">
-<meta property="og:url" content="http://xb18.github.io/2023/09/24/call-bind-apply/index.html">
+<meta property="og:title" content="clientWidth-offsetHeight">
+<meta property="og:url" content="http://xb18.github.io/2023/03/01/clientWidth%E3%80%81offsetHeight/index.html">
 <meta property="og:site_name" content="鹿酱小窝">
-<meta property="og:description" content="bind是返回对应函数，便于稍后调用；apply、call则是立即调用  bind、call传入多个参数，apply传入参数数组   123obj.myFun.call(db,&amp;#x27;成都&amp;#x27;,&amp;#x27;上海&amp;#x27;)；　　　　 &#x2F;&#x2F; 德玛 年龄 99  来自 成都去往上海obj.myFun.bind(db,&amp;#x27;成都&amp;#x27;,&amp;#x27;上海&amp;#x27;)();">
+<meta property="og:description" content="clientWidth clientWidth 属性是一个只读属性，它返回该元素的像素宽度，宽度包含内边距（padding），不包含边框（border），外边距（margin）和滚动条，是一个整数，单位是像素 px。 内联元素以及没有 CSS 样式的元素的 clientWidth 属性值为 0。  offsetHeight  offsetHeight 和 offsettWidth 属性返回元素的可">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-07T01:22:11.641Z">
+<meta property="og:image" content="http://xb18.github.io/images/image-20230811211224296.png">
+<meta property="og:image" content="http://xb18.github.io/images/image-20230811211230479.png">
+<meta property="article:published_time" content="2023-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-07T09:39:29.517Z">
 <meta property="article:author" content="xb18">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xb18.github.io/images/image-20230811211224296.png">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696726913576">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696726913594">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696726913576">
+    <link rel="stylesheet" href="/css/style.css?v=1696726913594">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696726913576">
+            <link rel="stylesheet" href="/custom.css?v=1696726913594">
         
     
 
@@ -41,7 +44,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696726913576"></script>
+    <script async src="/js/app.js?v=1696726913594"></script>
     
      
 
@@ -169,15 +172,15 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d3.jpg" alt="call、bind、apply" loading="lazy">
-        <h1>call、bind、apply</h1>
+        <img src="/../images/image-20230811211224296.png" alt="clientWidth-offsetHeight" loading="lazy">
+        <h1>clientWidth-offsetHeight</h1>
     </div>
     <div class="moelj-post-meta">
     <div class="moelj-rainbow">
-        <a class="moeljfont icon-calendar-fill">2023年09月24日</a>
+        <a class="moeljfont icon-calendar-fill">2023年03月01日</a>
         
         
-    <a><i class="moeljfont icon-areachart"></i>约112字</a>
+    <a><i class="moeljfont icon-areachart"></i>约104字</a>
     <a><i class="moeljfont icon-time-circle-fill"></i>预计需要1分钟</a>
 
     </div>
@@ -187,14 +190,13 @@
     
     
 </div>
-    <ol>
-<li><p>bind是返回对应函数，便于稍后调用；apply、call则是立即调用</p>
-</li>
-<li><p>bind、call传入多个参数，apply传入参数数组</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.<span class="property">myFun</span>.<span class="title function_">call</span>(db,<span class="string">&#x27;成都&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>)；　　　　 <span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br><span class="line">obj.<span class="property">myFun</span>.<span class="title function_">bind</span>(db,<span class="string">&#x27;成都&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>)();       <span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br><span class="line">obj.<span class="property">myFun</span>.<span class="title function_">apply</span>(db,[<span class="string">&#x27;成都&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>]);      <span class="comment">// 德玛 年龄 99  来自 成都去往上海  </span></span><br></pre></td></tr></table></figure>
-
+    <p><strong>clientWidth</strong></p>
+<p>clientWidth 属性是一个只读属性，它返回该元素的像素宽度，宽度包含内边距（padding），不包含边框（border），外边距（margin）和滚动条，是一个整数，单位是像素 px。</p>
+<p>内联元素以及没有 CSS 样式的元素的 clientWidth 属性值为 0。</p>
+<p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230811211224296.png" alt="image-20230811211224296" data-caption="image-20230811211224296" class="lazyload"></p>
+<p><strong>offsetHeight</strong> </p>
+<p>offsetHeight 和 <a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/prop-element-offsetwidth.html">offsettWidth</a> 属性返回元素的可见高度和宽度，包括内边距（padding）和边框（border）。</p>
+<p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230811211230479.png" alt="image-20230811211230479" data-caption="image-20230811211230479" class="lazyload"></p>
 
     <span></span>
 
@@ -204,7 +206,7 @@
       
     <div class="moelj-post-copyright">
         <strong>Author：</strong>xb18<br>
-        <strong>Link：</strong><a href="http://xb18.github.io/2023/09/24/call-bind-apply/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;09&#x2F;24&#x2F;call-bind-apply&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;09&#x2F;24&#x2F;call-bind-apply&#x2F;</a><br>
+        <strong>Link：</strong><a href="http://xb18.github.io/2023/03/01/clientWidth%E3%80%81offsetHeight/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -220,7 +222,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696726913546"></script>
+    <script async src="/js/copy-codeblock.js?v=1696726913551"></script>
   
 
   
