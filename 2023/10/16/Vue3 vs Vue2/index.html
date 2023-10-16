@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <title>Vue3 vs Vue2 - 鹿酱小窝</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/images/default/53945606.jpg" type="image/png" />
+    <meta name="description" content="Vue3 vs Vue2组合式API1234567891011121314151617181920&lt;script setup&gt;import &amp;#123; ref, onMounted &amp;#125; from &amp;#x27;vue&amp;#x27;&#x2F;&#x2F; 响应式状态const count &#x3D; ref(0)&#x2F;&#x2F; 更改状态、触发更新的函数function increment() &amp;#123;  cou">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue3 vs Vue2">
+<meta property="og:url" content="http://xb18.github.io/2023/10/16/Vue3%20vs%20Vue2/index.html">
+<meta property="og:site_name" content="鹿酱小窝">
+<meta property="og:description" content="Vue3 vs Vue2组合式API1234567891011121314151617181920&lt;script setup&gt;import &amp;#123; ref, onMounted &amp;#125; from &amp;#x27;vue&amp;#x27;&#x2F;&#x2F; 响应式状态const count &#x3D; ref(0)&#x2F;&#x2F; 更改状态、触发更新的函数function increment() &amp;#123;  cou">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-16T12:38:27.645Z">
+<meta property="article:author" content="xb18">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596149">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1697460596149">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1697460596149">
+        
+    
+
+    
+<script src="/lib/mdui-v1.0.1/js/mdui.js" async></script>
+<script src="/lib/medium-zoom/medium-zoom.js" async></script>
+<script src="/lib/lazysizes/lazysizes.js" async></script>
+
+
+    <script async src="/js/app.js?v=1697460596150"></script>
+    
+     
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+    <div id="moelj-background">
+        <div class="moelj-bg" 
+            style="background-image: url(/images/default/d5.jpg)"
+        ></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon moeljfont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="xb18" class="mdui-btn mdui-btn-icon"><img src="/images/default/53945606.jpg" alt="xb18"></a>
+            </div>
+        </div>
+    </div>
+    <div id="moelj-header">
+        <div class="moelj-drawer mdui-drawer" id="drawer">
+    <div class="moelj-avatar mdui-ripple">
+        <a href="/" title="xb18">
+            <img src="/images/default/53945606.jpg" alt="xb18" alt="xb18">
+        </a>
+    </div>
+    <div class="moelj-count">
+        <div><span>Articles</span>19</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <div class="moelj-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="moelj-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon moeljfont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </div>
+    <aside id="moelj-sidebar">
+        
+            
+            <div class="moelj-widget-wrap">
+    <div class="moelj-widget moelj-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+        
+            
+            
+
+        
+            
+            
+        
+            
+            
+            
+  <div class="moelj-widget-wrap">
+    <h3 class="moelj-widget-title">Archive</h3>
+    <div class="moelj-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+
+        
+            
+            
+  <div class="moelj-widget-wrap">
+    <h3 class="moelj-widget-title">Recent Posts</h3>
+    <div class="moelj-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/10/16/Vue3%20vs%20Vue2/">Vue3 vs Vue2</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/15/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/">前端安全</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/12/socketio/">socket.io使用</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/24/call-bind-apply/">call、bind、apply</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/24/npm/">安装nodejs后的相关准备工作-npm-nvm</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+        
+    </aside>
+    <div class="moelj-copyright">
+        &copy; 2023 xb18
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/xb18/hexo-theme-moelj" target="_blank">moelj</a>
+        <span></span>
+
+    </div>
+</div><!-- .moelj-drawer -->
+    </div>
+    <div id="moelj-content">
+        <div class="moelj-primary">
+    <div class="moelj-post">
+  <article>
+    <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
+        <img src="/images/default/d5.jpg" alt="Vue3 vs Vue2" loading="lazy">
+        <h1>Vue3 vs Vue2</h1>
+    </div>
+    <div class="moelj-post-meta">
+    <div class="moelj-rainbow">
+        <a class="moeljfont icon-calendar-fill">2023年10月16日</a>
+        
+        
+    <a><i class="moeljfont icon-areachart"></i>约419字</a>
+    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要2分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+    <h2 id="Vue3-vs-Vue2"><a href="#Vue3-vs-Vue2" class="headerlink" title="Vue3 vs Vue2"></a>Vue3 vs Vue2</h2><h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref, onMounted &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">// 响应式状态</span><br><span class="line">const count = ref(0)</span><br><span class="line"></span><br><span class="line">// 更改状态、触发更新的函数</span><br><span class="line">function increment() &#123;</span><br><span class="line">  count.value++</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 生命周期钩子</span><br><span class="line">onMounted(() =&gt; &#123;</span><br><span class="line">  console.log(`计数器初始值为 $&#123;count.value&#125;。`)</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;点击了：&#123;&#123; count &#125;&#125; 次&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="全局API"><a href="#全局API" class="headerlink" title="全局API"></a>全局API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(&#123;&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>2.x 全局 API</th>
+<th>3.x 实例 API (<code>app</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vue.config</td>
+<td>app.config</td>
+</tr>
+<tr>
+<td>Vue.config.productionTip</td>
+<td><em>移除</em> (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.config.ignoredElements</td>
+<td>app.config.compilerOptions.isCustomElement (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#config-ignoredelements-%E6%9B%BF%E6%8D%A2%E4%B8%BA-config-iscustomelement">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.component</td>
+<td>app.component</td>
+</tr>
+<tr>
+<td>Vue.directive</td>
+<td>app.directive</td>
+</tr>
+<tr>
+<td>Vue.mixin</td>
+<td>app.mixin</td>
+</tr>
+<tr>
+<td>Vue.use</td>
+<td>app.use (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E9%A1%BB%E7%9F%A5">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.prototype</td>
+<td>app.config.globalProperties (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#vue-prototype-%E6%9B%BF%E6%8D%A2%E4%B8%BA-config-globalproperties">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.extend</td>
+<td><em>移除</em> (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#vue-extend-%E7%A7%BB%E9%99%A4">见下方</a>)</td>
+</tr>
+</tbody></table>
+<h3 id="Treeshaking"><a href="#Treeshaking" class="headerlink" title="Treeshaking"></a>Treeshaking</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123; nextTick &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">nextTick(() =&gt; &#123;</span><br><span class="line">  // 一些和 DOM 有关的东西</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-model-和-sync"><a href="#v-model-和-sync" class="headerlink" title="v-model 和 sync"></a>v-model 和 sync</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// vue2</span><br><span class="line">&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;</span><br><span class="line">&lt;!-- 是以下的简写: --&gt;</span><br><span class="line">&lt;ChildComponent :value=&quot;pageTitle&quot; @input=&quot;pageTitle = $event&quot; /&gt;</span><br><span class="line">&lt;!-- sync --&gt;</span><br><span class="line">&lt;ChildComponent :title=&quot;pageTitle&quot; @update:title=&quot;pageTitle = $event&quot; /&gt;</span><br><span class="line">&lt;ChildComponent :title.sync=&quot;pageTitle&quot; /&gt; &lt;!-- 简写 --&gt;</span><br><span class="line"></span><br><span class="line">// vue3</span><br><span class="line">&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;</span><br><span class="line">&lt;!-- 是以下的简写: --&gt;</span><br><span class="line">&lt;ChildComponent :modelValue=&quot;pageTitle&quot; @update:modelValue=&quot;pageTitle = $event&quot;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Vue 2.x --&gt;</span><br><span class="line">&lt;template v-for=&quot;item in list&quot;&gt;</span><br><span class="line">  &lt;div :key=&quot;&#x27;heading-&#x27; + item.id&quot;&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;span :key=&quot;&#x27;content-&#x27; + item.id&quot;&gt;...&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Vue 3.x --&gt;</span><br><span class="line">&lt;template v-for=&quot;item in list&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">  &lt;div&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;span&gt;...&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="v-if-v-for"><a href="#v-if-v-for" class="headerlink" title="v-if,v-for"></a>v-if,v-for</h3><p>2.x 版本中在一个元素上同时使用 <code>v-if</code> 和 <code>v-for</code> 时，<code>v-for</code> 会优先作用。</p>
+<p>3.x 版本中 <code>v-if</code> 总是优先于 <code>v-for</code> 生效。</p>
+
+    <span></span>
+
+  </article>
+
+  
+      
+    <div class="moelj-post-copyright">
+        <strong>Author：</strong>xb18<br>
+        <strong>Link：</strong><a href="http://xb18.github.io/2023/10/16/Vue3%20vs%20Vue2/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;10&#x2F;16&#x2F;Vue3%20vs%20Vue2&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;10&#x2F;16&#x2F;Vue3%20vs%20Vue2&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="moelj-post-meta moelj-rainbow">
+   
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1697460596100"></script>
+  
+
+  
+</div>
+<script>
+  document.addEventListener('lazyloaded', (e) => {
+    mediumZoom(e.target);
+  });
+</script>
+</div>
+        <div class="moelj-post-right">
+              <div class="moelj-fixed">
+                    <!-- right-toc -->
+                    
+                    
+                        <div class="moelj-toc-wrap">
+                            <div class="moelj-toc">
+                                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue3-vs-Vue2"><span class="toc-number">1.</span> <span class="toc-text">Vue3 vs Vue2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%BC%8FAPI"><span class="toc-number">1.1.</span> <span class="toc-text">组合式API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80API"><span class="toc-number">1.2.</span> <span class="toc-text">全局API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Treeshaking"><span class="toc-number">1.3.</span> <span class="toc-text">Treeshaking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model-%E5%92%8C-sync"><span class="toc-number">1.4.</span> <span class="toc-text">v-model 和 sync</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#key"><span class="toc-number">1.5.</span> <span class="toc-text">key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-if-v-for"><span class="toc-number">1.6.</span> <span class="toc-text">v-if,v-for</span></a></li></ol></li></ol>
+                            </div>
+                        </div>
+                    
+                    <!-- tool -->
+                    <div class="moelj-tool"> 
+                      
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="moeljfont icon-i-catalog"></i>
+                                  <div class="moelj-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue3-vs-Vue2"><span class="toc-number">1.</span> <span class="toc-text">Vue3 vs Vue2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%BC%8FAPI"><span class="toc-number">1.1.</span> <span class="toc-text">组合式API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80API"><span class="toc-number">1.2.</span> <span class="toc-text">全局API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Treeshaking"><span class="toc-number">1.3.</span> <span class="toc-text">Treeshaking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model-%E5%92%8C-sync"><span class="toc-number">1.4.</span> <span class="toc-text">v-model 和 sync</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#key"><span class="toc-number">1.5.</span> <span class="toc-text">key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-if-v-for"><span class="toc-number">1.6.</span> <span class="toc-text">v-if,v-for</span></a></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                      
+                      <a href="#moelj-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="moeljfont icon-caret-top"></i></button></a>
+                    </div>
+              </div>
+            </div>
+    </div>
+    <div id="moelj-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="Search"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+    <!-- Google Analytics-->
+
+</body>
+
+</html>

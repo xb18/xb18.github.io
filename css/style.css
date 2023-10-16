@@ -1476,6 +1476,11 @@ body.mdui-drawer-body-left {
   background: #fff;
   color: #444;
 }
+@media screen and (min-width: 1280px) {
+  .moelj-post-right .moelj-tool .mdui-fab.catalog {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .moelj-post-right {
     margin: 24px 0px;
@@ -1496,6 +1501,38 @@ body.mdui-drawer-body-left {
     width: 44px;
     height: 44px;
     line-height: 44px;
+  }
+}
+.moelj-toc-wrap {
+  position: absolute;
+  top: 24px;
+  z-index: 9999;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 1rem var(--color-shadow);
+  width: 320px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.moelj-toc-wrap .moelj-toc {
+  display: block;
+  position: relative;
+  width: 100%;
+  box-shadow: none;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.moelj-toc-wrap .moelj-toc > ol {
+  margin: 0;
+  padding: 0;
+  max-height: initial;
+  overflow-y: initial;
+  padding: 0;
+}
+@media screen and (max-width: 1280px) {
+  .moelj-toc-wrap {
+    display: none;
   }
 }
 .moelj-toc {

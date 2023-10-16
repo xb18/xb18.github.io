@@ -10,28 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/images/default/53945606.jpg" type="image/png" />
-    <meta name="description" content="配置vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf 常用nginx -s reload systemctl restart nginx  代理$proxy_add_x_forwarded_for 实践l 404 没有权限，设置配置文件中用户为root l 上传文件大小 413 Request Entity Too Large client**_max_body_s">
+    <meta name="description" content="配置文件vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf 常用命令nginx -s reload # 向主进程发送信号，重新加载配置文件，热重启 nginx -s reopen  # 重启 Nginx nginx -s stop  # 快速关闭 nginx -s quit  # 等待工作进程处理完成后关闭 nginx -T    # 查看当前 Nginx 最终的配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx">
 <meta property="og:url" content="http://xb18.github.io/2023/02/12/nginx/index.html">
 <meta property="og:site_name" content="鹿酱小窝">
-<meta property="og:description" content="配置vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf 常用nginx -s reload systemctl restart nginx  代理$proxy_add_x_forwarded_for 实践l 404 没有权限，设置配置文件中用户为root l 上传文件大小 413 Request Entity Too Large client**_max_body_s">
+<meta property="og:description" content="配置文件vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf 常用命令nginx -s reload # 向主进程发送信号，重新加载配置文件，热重启 nginx -s reopen  # 重启 Nginx nginx -s stop  # 快速关闭 nginx -s quit  # 等待工作进程处理完成后关闭 nginx -T    # 查看当前 Nginx 最终的配置">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-07T01:22:11.643Z">
+<meta property="article:modified_time" content="2023-10-16T06:04:33.773Z">
 <meta property="article:author" content="xb18">
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696748652954">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596196">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696748652954">
+    <link rel="stylesheet" href="/css/style.css?v=1697460596196">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696748652954">
+            <link rel="stylesheet" href="/custom.css?v=1697460596196">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696748652954"></script>
+    <script async src="/js/app.js?v=1697460596196"></script>
     
      
 
@@ -71,7 +71,7 @@
         </a>
     </div>
     <div class="moelj-count">
-        <div><span>Articles</span>13</div>
+        <div><span>Articles</span>19</div>
         <div><span>Tags</span>0</div>
         <div><span>Categories</span>0</div>
     </div>
@@ -115,7 +115,7 @@
   <div class="moelj-widget-wrap">
     <h3 class="moelj-widget-title">Archive</h3>
     <div class="moelj-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -130,23 +130,23 @@
       <ul>
         
           <li>
+            <a href="/2023/10/16/Vue3%20vs%20Vue2/">Vue3 vs Vue2</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/15/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/">前端安全</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/12/socketio/">socket.io使用</a>
+          </li>
+        
+          <li>
             <a href="/2023/09/24/call-bind-apply/">call、bind、apply</a>
           </li>
         
           <li>
-            <a href="/2023/09/24/npm/">安装nodejs后的npm相关准备工作</a>
-          </li>
-        
-          <li>
-            <a href="/2023/09/24/windows-build-tools/">windows-build-tools安装</a>
-          </li>
-        
-          <li>
-            <a href="/2023/09/03/element-ui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">element-ui踩坑记录</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/22/%E5%87%BD%E6%95%B0/">函数</a>
+            <a href="/2023/09/24/npm/">安装nodejs后的相关准备工作-npm-nvm</a>
           </li>
         
       </ul>
@@ -169,7 +169,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d5.jpg" alt="nginx" loading="lazy">
+        <img src="/images/default/d1.jpg" alt="nginx" loading="lazy">
         <h1>nginx</h1>
     </div>
     <div class="moelj-post-meta">
@@ -177,8 +177,8 @@
         <a class="moeljfont icon-calendar-fill">2023年02月12日</a>
         
         
-    <a><i class="moeljfont icon-areachart"></i>约259字</a>
-    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要1分钟</a>
+    <a><i class="moeljfont icon-areachart"></i>约1.4k字</a>
+    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要7分钟</a>
 
     </div>
     
@@ -187,14 +187,7 @@
     
     
 </div>
-    <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
-<h2 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h2><p>nginx -s reload</p>
-<p>systemctl restart nginx </p>
-<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>$proxy_add_x_forwarded_for</p>
-<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>l 404 没有权限，设置配置文件中用户为root</p>
-<p>l 上传文件大小</p>
-<p>413 Request Entity Too Large</p>
-<p>client**_max_body_size 50m;**</p>
+    <h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>nginx -s reload # 向主进程发送信号，重新加载配置文件，热重启</p>
 <p>nginx -s reopen  # 重启 Nginx</p>
 <p>nginx -s stop  # 快速关闭</p>
@@ -209,6 +202,27 @@
 <p>systemctl enable nginx  # 设置开机启动 Nginx</p>
 <p>systemctl disable nginx # 关闭开机启动 Nginx</p>
 <p>systemctl status nginx  # 查看 Nginx 运行状态</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="404-没有权限"><a href="#404-没有权限" class="headerlink" title="404 没有权限"></a>404 没有权限</h3><p>设置配置文件中用户为root</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">user</span>  root;</span><br></pre></td></tr></table></figure>
+
+<h3 id="413-Request-Entity-Too-Large"><a href="#413-Request-Entity-Too-Large" class="headerlink" title="413 Request Entity Too Large"></a>413 Request Entity Too Large</h3><p>上传文件大小设置</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">client_max_body_size</span> <span class="number">100m</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$proxy_add_x_forwarded_for</span><br></pre></td></tr></table></figure>
+
+<h3 id="gzip开启"><a href="#gzip开启" class="headerlink" title="gzip开启"></a>gzip开启</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/nginx/conf.d/gzip.conf</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip</span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/jsonapplication/x-javascript text/xml application/xml application/xml+rsstext/javascript;</span><br><span class="line"><span class="comment"># 压缩类型 缺少图片和js</span></span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下</span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;</span><br><span class="line"><span class="attribute">gzip_proxied</span> any;</span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;</span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;</span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;</span><br><span class="line"><span class="comment"># gzip_min_length 1k;</span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="指定路径解析至不同vue项目"><a href="#指定路径解析至不同vue项目" class="headerlink" title="指定路径解析至不同vue项目"></a>指定路径解析至不同vue项目</h3><p>比如访问 <a target="_blank" rel="noopener" href="http://www.xxxxx.com/">http://www.xxxxx.com</a> 时，解析至A项目;</p>
+<p>如果访问 <a target="_blank" rel="noopener" href="http://www.xxxxx.com/a%E6%97%B6%EF%BC%8C%E8%A7%A3%E6%9E%90%E8%87%B3B%E9%A1%B9%E7%9B%AE%EF%BC%9B">http://www.xxxxx.com/a时，解析至B项目；</a></p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="section">location</span> /a &#123;</span><br><span class="line">        <span class="attribute">alias</span> /usr/share/nginx/a/dist;</span><br><span class="line">         <span class="attribute">index</span> index.html;</span><br><span class="line">         <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /a/index.html;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="section">location</span> /  &#123;</span><br><span class="line">         <span class="attribute">root</span> /usr/share/nginx/pc/dist;</span><br><span class="line">         <span class="comment">#通过如下动态解析</span></span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ <span class="variable">@router</span>;</span><br><span class="line">         <span class="attribute">index</span> index.html;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">#通过如下动态解析</span></span><br><span class="line">     <span class="section">location</span> <span class="variable">@router</span> &#123;</span><br><span class="line">        <span class="attribute">rewrite</span><span class="regexp"> ^.*$</span> /index.html <span class="literal">last</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置http自动跳转到https"><a href="#设置http自动跳转到https" class="headerlink" title="设置http自动跳转到https"></a>设置http自动跳转到https</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">if</span> (<span class="variable">$scheme</span> = http) &#123;   <span class="comment"># 设置301跳转，设置http跳转到https</span></span><br><span class="line">        <span class="attribute">return</span> <span class="number">302</span> https://moelj.com<span class="variable">$request_uri</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a>配置示例</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">user  root;                        <span class="comment"># 运行用户，默认即是nginx，可以不进行设置</span></span><br><span class="line">worker_processes  auto;                <span class="comment"># Nginx 进程数，一般设置为和 CPU 核数一样</span></span><br><span class="line">error_log  /var/log/nginx/error.log warn;   <span class="comment"># Nginx 的错误日志存放目录</span></span><br><span class="line">pid        /var/run/nginx.pid;      <span class="comment"># Nginx 服务启动时的 pid 存放位置</span></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    use epoll;     <span class="comment"># 使用epoll的I/O模型(如果你不知道Nginx该使用哪种轮询方法，会自动选择一个最适合你操作系统的)</span></span><br><span class="line">    worker_connections 1024;   <span class="comment"># 每个进程允许最大并发数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;   <span class="comment"># 配置使用最频繁的部分，代理、缓存、日志定义等绝大多数功能和第三方模块的配置都在这里设置</span></span><br><span class="line">    <span class="comment"># 设置日志模式</span></span><br><span class="line">    log_format  main  <span class="string">&#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;   <span class="comment"># Nginx访问日志存放位置</span></span><br><span class="line"></span><br><span class="line">    sendfile            on;   <span class="comment"># 开启高效传输模式</span></span><br><span class="line">    tcp_nopush          on;   <span class="comment"># 减少网络报文段的数量</span></span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;   <span class="comment"># 保持连接的时间，也叫超时时间，单位秒</span></span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line">    </span><br><span class="line">    client_max_body_size 100m;</span><br><span class="line">    include             /etc/nginx/mime.types;      <span class="comment"># 文件扩展名与类型映射表</span></span><br><span class="line">    default_type        application/octet-stream;   <span class="comment"># 默认文件类型</span></span><br><span class="line"></span><br><span class="line">    include /etc/nginx/conf.d/*.conf;   <span class="comment"># 加载子配置项</span></span><br><span class="line">    </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;       <span class="comment"># 配置监听的端口</span></span><br><span class="line">        listen       443 ssl; <span class="comment">#80;</span></span><br><span class="line">        server_name  localhost;    <span class="comment"># 配置的域名</span></span><br><span class="line">        ssl_certificate     cert/scs1677107161520_moelj.com_server.crt;  </span><br><span class="line">             ssl_certificate_key cert/scs1677107161520_moelj.com_server.key;</span><br><span class="line">             ssl_session_cache   shared:SSL:1m;  </span><br><span class="line">             ssl_session_timeout 5m;  </span><br><span class="line">             ssl_ciphers         HIGH:!aNULL:!MD5;         </span><br><span class="line">             ssl_prefer_server_ciphers  on;  </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$scheme</span> = http) &#123;   <span class="comment"># 设置301跳转，设置http跳转到https</span></span><br><span class="line">                <span class="built_in">return</span> 302 https://moelj.com<span class="variable">$request_uri</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        location /wr &#123;</span><br><span class="line">                 <span class="built_in">alias</span> /root/wr-web/.output/public;</span><br><span class="line">                 index index.html;</span><br><span class="line">                 try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /wr/index.html;</span><br><span class="line">        &#125;</span><br><span class="line">        location /bimg &#123;</span><br><span class="line">                 <span class="built_in">alias</span> /root/bot-img/dist;</span><br><span class="line">                 index index.html;</span><br><span class="line">                 try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /bimg/index.html;</span><br><span class="line">        &#125;</span><br><span class="line">        location / &#123;</span><br><span class="line">                root   /root/bot-web/dist;  <span class="comment"># 网站根目录</span></span><br><span class="line">                index  index.html index.htm;   <span class="comment"># 默认首页文件</span></span><br><span class="line">                try_files  <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html @rewrites;  </span><br><span class="line">                    </span><br><span class="line">                expires -1;                          <span class="comment"># 首页一般没有强制缓存</span></span><br><span class="line">                add_header Cache-Control no-cache;</span><br><span class="line">        &#125;</span><br><span class="line">        location ~ ^/api/ &#123;</span><br><span class="line">                rewrite <span class="string">&quot;^/api/(.*)$&quot;</span> /<span class="variable">$1</span> <span class="built_in">break</span>;</span><br><span class="line">                proxy_pass http://127.0.0.1:9501;</span><br><span class="line">                proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ ^/s/ &#123;</span><br><span class="line">                rewrite <span class="string">&quot;^/s/(.*)$&quot;</span> /<span class="variable">$1</span> <span class="built_in">break</span>;</span><br><span class="line">                proxy_pass http://127.0.0.1:9501;</span><br><span class="line">                proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location @rewrites &#123;</span><br><span class="line">                rewrite ^(.+)$ /index.html <span class="built_in">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="comment"># error_page 500 502 503 504 /50x.html;  # 默认50x对应的访问页面</span></span><br><span class="line">        <span class="comment"># error_page 400 404 error.html;   # 同上</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mime.types</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line">types &#123;</span><br><span class="line">    text/html                                        html htm shtml;</span><br><span class="line">    text/css                                         css;</span><br><span class="line">    text/xml                                         xml;</span><br><span class="line">    image/gif                                        gif;</span><br><span class="line">    image/jpeg                                       jpeg jpg;</span><br><span class="line">    application/javascript                           js;</span><br><span class="line">    application/atom+xml                             atom;</span><br><span class="line">    application/rss+xml                              rss;</span><br><span class="line"></span><br><span class="line">    text/mathml                                      mml;</span><br><span class="line">    text/plain                                       txt;</span><br><span class="line">    text/vnd.sun.j2me.app-descriptor                 jad;</span><br><span class="line">    text/vnd.wap.wml                                 wml;</span><br><span class="line">    text/x-component                                 htc;</span><br><span class="line"></span><br><span class="line">    image/png                                        png;</span><br><span class="line">    image/svg+xml                                    svg svgz;</span><br><span class="line">    image/tiff                                       tif tiff;</span><br><span class="line">    image/vnd.wap.wbmp                               wbmp;</span><br><span class="line">    image/webp                                       webp;</span><br><span class="line">    image/x-icon                                     ico;</span><br><span class="line">    image/x-jng                                      jng;</span><br><span class="line">    image/x-ms-bmp                                   bmp;</span><br><span class="line"></span><br><span class="line">    application/font-woff                            woff;</span><br><span class="line">    application/java-archive                         jar war ear;</span><br><span class="line">    application/json                                 json;</span><br><span class="line">    application/mac-binhex40                         hqx;</span><br><span class="line">    application/msword                               doc;</span><br><span class="line">    application/pdf                                  pdf;</span><br><span class="line">    application/postscript                           ps eps ai;</span><br><span class="line">    application/rtf                                  rtf;</span><br><span class="line">    application/vnd.apple.mpegurl                    m3u8;</span><br><span class="line">    application/vnd.google-earth.kml+xml             kml;</span><br><span class="line">    application/vnd.google-earth.kmz                 kmz;</span><br><span class="line">    application/vnd.ms-excel                         xls;</span><br><span class="line">    application/vnd.ms-fontobject                    eot;</span><br><span class="line">    application/vnd.ms-powerpoint                    ppt;</span><br><span class="line">    application/vnd.oasis.opendocument.graphics      odg;</span><br><span class="line">    application/vnd.oasis.opendocument.presentation  odp;</span><br><span class="line">    application/vnd.oasis.opendocument.spreadsheet   ods;</span><br><span class="line">    application/vnd.oasis.opendocument.text          odt;</span><br><span class="line">    application/vnd.openxmlformats-officedocument.presentationml.presentation</span><br><span class="line">                                                     pptx;</span><br><span class="line">    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</span><br><span class="line">                                                     xlsx;</span><br><span class="line">    application/vnd.openxmlformats-officedocument.wordprocessingml.document</span><br><span class="line">                                                     docx;</span><br><span class="line">    application/vnd.wap.wmlc                         wmlc;</span><br><span class="line">    application/x-7z-compressed                      7z;</span><br><span class="line">    application/x-cocoa                              cco;</span><br><span class="line">    application/x-java-archive-diff                  jardiff;</span><br><span class="line">    application/x-java-jnlp-file                     jnlp;</span><br><span class="line">    application/x-makeself                           run;</span><br><span class="line">    application/x-perl                               pl pm;</span><br><span class="line">    application/x-pilot                              prc pdb;</span><br><span class="line">    application/x-rar-compressed                     rar;</span><br><span class="line">    application/x-redhat-package-manager             rpm;</span><br><span class="line">    application/x-sea                                sea;</span><br><span class="line">    application/x-shockwave-flash                    swf;</span><br><span class="line">    application/x-stuffit                            sit;</span><br><span class="line">    application/x-tcl                                tcl tk;</span><br><span class="line">    application/x-x509-ca-cert                       der pem crt;</span><br><span class="line">    application/x-xpinstall                          xpi;</span><br><span class="line">    application/xhtml+xml                            xhtml;</span><br><span class="line">    application/xspf+xml                             xspf;</span><br><span class="line">    application/zip                                  zip;</span><br><span class="line"></span><br><span class="line">    application/octet-stream                         bin exe dll;</span><br><span class="line">    application/octet-stream                         deb;</span><br><span class="line">    application/octet-stream                         dmg;</span><br><span class="line">    application/octet-stream                         iso img;</span><br><span class="line">    application/octet-stream                         msi msp msm;</span><br><span class="line"></span><br><span class="line">    audio/midi                                       mid midi kar;</span><br><span class="line">    audio/mpeg                                       mp3;</span><br><span class="line">    audio/ogg                                        ogg;</span><br><span class="line">    audio/x-m4a                                      m4a;</span><br><span class="line">    audio/x-realaudio                                ra;</span><br><span class="line"></span><br><span class="line">    video/3gpp                                       3gpp 3gp;</span><br><span class="line">    video/mp2t                                       ts;</span><br><span class="line">    video/mp4                                        mp4;</span><br><span class="line">    video/mpeg                                       mpeg mpg;</span><br><span class="line">    video/quicktime                                  mov;</span><br><span class="line">    video/webm                                       webm;</span><br><span class="line">    video/x-flv                                      flv;</span><br><span class="line">    video/x-m4v                                      m4v;</span><br><span class="line">    video/x-mng                                      mng;</span><br><span class="line">    video/x-ms-asf                                   asx asf;</span><br><span class="line">    video/x-ms-wmv                                   wmv;</span><br><span class="line">    video/x-msvideo                                  avi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     <span></span>
 
@@ -234,35 +248,42 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696748652894"></script>
+    <script async src="/js/copy-codeblock.js?v=1697460596111"></script>
   
 
   
 </div>
 <script>
-  mediumZoom('[data-zoomable]');
+  document.addEventListener('lazyloaded', (e) => {
+    mediumZoom(e.target);
+  });
 </script>
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">
-                  <div class="moelj-tool"> 
+                    <!-- right-toc -->
                     
+                    
+                        <div class="moelj-toc-wrap">
+                            <div class="moelj-toc">
+                                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-number">3.</span> <span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#404-%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-number">3.1.</span> <span class="toc-text">404 没有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#413-Request-Entity-Too-Large"><span class="toc-number">3.2.</span> <span class="toc-text">413 Request Entity Too Large</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E5%BC%80%E5%90%AF"><span class="toc-number">3.4.</span> <span class="toc-text">gzip开启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%A7%A3%E6%9E%90%E8%87%B3%E4%B8%8D%E5%90%8Cvue%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.5.</span> <span class="toc-text">指定路径解析至不同vue项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEhttp%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E5%88%B0https"><span class="toc-number">3.6.</span> <span class="toc-text">设置http自动跳转到https</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.7.</span> <span class="toc-text">配置示例</span></a></li></ol></li></ol>
+                            </div>
+                        </div>
+                    
+                    <!-- tool -->
+                    <div class="moelj-tool"> 
                       
-                        
-                          
                           
                               <button class="mdui-fab catalog" style="overflow:unset;">
                                   <i class="moeljfont icon-i-catalog"></i>
                                   <div class="moelj-toc">
-                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">常用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5"><span class="toc-number">4.</span> <span class="toc-text">实践</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">常用命令</span></a></li></ol>
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-number">3.</span> <span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#404-%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-number">3.1.</span> <span class="toc-text">404 没有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#413-Request-Entity-Too-Large"><span class="toc-number">3.2.</span> <span class="toc-text">413 Request Entity Too Large</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E5%BC%80%E5%90%AF"><span class="toc-number">3.4.</span> <span class="toc-text">gzip开启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%A7%A3%E6%9E%90%E8%87%B3%E4%B8%8D%E5%90%8Cvue%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.5.</span> <span class="toc-text">指定路径解析至不同vue项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEhttp%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E5%88%B0https"><span class="toc-number">3.6.</span> <span class="toc-text">设置http自动跳转到https</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.7.</span> <span class="toc-text">配置示例</span></a></li></ol></li></ol>
                                   </div>
                               </button>
                           
-                          
                       
-                    
                       <a href="#moelj-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="moeljfont icon-caret-top"></i></button></a>
-                  </div>
+                    </div>
               </div>
             </div>
     </div>
