@@ -23,16 +23,13 @@
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596149">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255850">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596149">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255850">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596149">
-        
     
 
     
@@ -41,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596150"></script>
+    <script async src="/js/app.js?v=1697508255851"></script>
     
      
 
@@ -90,14 +87,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255851"></script>
 
 
 
@@ -169,7 +172,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d5.jpg" alt="Vue3 vs Vue2" loading="lazy">
+        <img src="/images/default/d1.jpg" alt="Vue3 vs Vue2" loading="lazy">
         <h1>Vue3 vs Vue2</h1>
     </div>
     <div class="moelj-post-meta">
@@ -187,11 +190,11 @@
     
     
 </div>
-    <h2 id="Vue3-vs-Vue2"><a href="#Vue3-vs-Vue2" class="headerlink" title="Vue3 vs Vue2"></a>Vue3 vs Vue2</h2><h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref, onMounted &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">// 响应式状态</span><br><span class="line">const count = ref(0)</span><br><span class="line"></span><br><span class="line">// 更改状态、触发更新的函数</span><br><span class="line">function increment() &#123;</span><br><span class="line">  count.value++</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 生命周期钩子</span><br><span class="line">onMounted(() =&gt; &#123;</span><br><span class="line">  console.log(`计数器初始值为 $&#123;count.value&#125;。`)</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;点击了：&#123;&#123; count &#125;&#125; 次&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+    <h2 id="Vue3-vs-Vue2"><a href="#Vue3-vs-Vue2" class="headerlink" title="Vue3 vs Vue2"></a>Vue3 vs Vue2</h2><h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;script setup&gt;<br>import &#123; ref, onMounted &#125; from &#x27;vue&#x27;<br><br>// 响应式状态<br>const count = ref(0)<br><br>// 更改状态、触发更新的函数<br>function increment() &#123;<br>  count.value++<br>&#125;<br><br>// 生命周期钩子<br>onMounted(() =&gt; &#123;<br>  console.log(`计数器初始值为 $&#123;count.value&#125;。`)<br>&#125;)<br>&lt;/script&gt;<br><br>&lt;template&gt;<br>  &lt;button @click=&quot;increment&quot;&gt;点击了：&#123;&#123; count &#125;&#125; 次&lt;/button&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure>
 
 
 
-<h3 id="全局API"><a href="#全局API" class="headerlink" title="全局API"></a>全局API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(&#123;&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="全局API"><a href="#全局API" class="headerlink" title="全局API"></a>全局API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue&#x27;</span><br><br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(&#123;&#125;)<br><br></code></pre></td></tr></table></figure>
 
 
 
@@ -239,11 +242,11 @@
 <td><em>移除</em> (<a target="_blank" rel="noopener" href="https://v3-migration.vuejs.org/zh/breaking-changes/global-api.html#vue-extend-%E7%A7%BB%E9%99%A4">见下方</a>)</td>
 </tr>
 </tbody></table>
-<h3 id="Treeshaking"><a href="#Treeshaking" class="headerlink" title="Treeshaking"></a>Treeshaking</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123; nextTick &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">nextTick(() =&gt; &#123;</span><br><span class="line">  // 一些和 DOM 有关的东西</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Treeshaking"><a href="#Treeshaking" class="headerlink" title="Treeshaking"></a>Treeshaking</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vue">import &#123; nextTick &#125; from &#x27;vue&#x27;<br><br>nextTick(() =&gt; &#123;<br>  // 一些和 DOM 有关的东西<br>&#125;)<br><br></code></pre></td></tr></table></figure>
 
-<h3 id="v-model-和-sync"><a href="#v-model-和-sync" class="headerlink" title="v-model 和 sync"></a>v-model 和 sync</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// vue2</span><br><span class="line">&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;</span><br><span class="line">&lt;!-- 是以下的简写: --&gt;</span><br><span class="line">&lt;ChildComponent :value=&quot;pageTitle&quot; @input=&quot;pageTitle = $event&quot; /&gt;</span><br><span class="line">&lt;!-- sync --&gt;</span><br><span class="line">&lt;ChildComponent :title=&quot;pageTitle&quot; @update:title=&quot;pageTitle = $event&quot; /&gt;</span><br><span class="line">&lt;ChildComponent :title.sync=&quot;pageTitle&quot; /&gt; &lt;!-- 简写 --&gt;</span><br><span class="line"></span><br><span class="line">// vue3</span><br><span class="line">&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;</span><br><span class="line">&lt;!-- 是以下的简写: --&gt;</span><br><span class="line">&lt;ChildComponent :modelValue=&quot;pageTitle&quot; @update:modelValue=&quot;pageTitle = $event&quot;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="v-model-和-sync"><a href="#v-model-和-sync" class="headerlink" title="v-model 和 sync"></a>v-model 和 sync</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vue">// vue2<br>&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;<br>&lt;!-- 是以下的简写: --&gt;<br>&lt;ChildComponent :value=&quot;pageTitle&quot; @input=&quot;pageTitle = $event&quot; /&gt;<br>&lt;!-- sync --&gt;<br>&lt;ChildComponent :title=&quot;pageTitle&quot; @update:title=&quot;pageTitle = $event&quot; /&gt;<br>&lt;ChildComponent :title.sync=&quot;pageTitle&quot; /&gt; &lt;!-- 简写 --&gt;<br><br>// vue3<br>&lt;ChildComponent v-model=&quot;pageTitle&quot; /&gt;<br>&lt;!-- 是以下的简写: --&gt;<br>&lt;ChildComponent :modelValue=&quot;pageTitle&quot; @update:modelValue=&quot;pageTitle = $event&quot;<br>/&gt;<br><br></code></pre></td></tr></table></figure>
 
-<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Vue 2.x --&gt;</span><br><span class="line">&lt;template v-for=&quot;item in list&quot;&gt;</span><br><span class="line">  &lt;div :key=&quot;&#x27;heading-&#x27; + item.id&quot;&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;span :key=&quot;&#x27;content-&#x27; + item.id&quot;&gt;...&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Vue 3.x --&gt;</span><br><span class="line">&lt;template v-for=&quot;item in list&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">  &lt;div&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;span&gt;...&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;!-- Vue 2.x --&gt;<br>&lt;template v-for=&quot;item in list&quot;&gt;<br>  &lt;div :key=&quot;&#x27;heading-&#x27; + item.id&quot;&gt;...&lt;/div&gt;<br>  &lt;span :key=&quot;&#x27;content-&#x27; + item.id&quot;&gt;...&lt;/span&gt;<br>&lt;/template&gt;<br><br>&lt;!-- Vue 3.x --&gt;<br>&lt;template v-for=&quot;item in list&quot; :key=&quot;item.id&quot;&gt;<br>  &lt;div&gt;...&lt;/div&gt;<br>  &lt;span&gt;...&lt;/span&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure>
 
 <h3 id="v-if-v-for"><a href="#v-if-v-for" class="headerlink" title="v-if,v-for"></a>v-if,v-for</h3><p>2.x 版本中在一个元素上同时使用 <code>v-if</code> 和 <code>v-for</code> 时，<code>v-for</code> 会优先作用。</p>
 <p>3.x 版本中 <code>v-if</code> 总是优先于 <code>v-for</code> 生效。</p>
@@ -272,7 +275,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596100"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255801"></script>
   
 
   

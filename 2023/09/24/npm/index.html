@@ -23,16 +23,13 @@
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596165">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255865">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596165">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255865">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596165">
-        
     
 
     
@@ -41,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596165"></script>
+    <script async src="/js/app.js?v=1697508255865"></script>
     
      
 
@@ -90,14 +87,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255865"></script>
 
 
 
@@ -213,7 +216,7 @@
 </ul>
 <h2 id="NVM版本管理"><a href="#NVM版本管理" class="headerlink" title="NVM版本管理"></a>NVM版本管理</h2><p>nvm 全名叫做 nodejs version manage，管理nodejs版本</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nvm -v <span class="comment"># 查看nvm版本</span></span><br><span class="line">nvm list <span class="comment"># 查看已经安装的版本</span></span><br><span class="line">nvm install &lt;version&gt; <span class="comment"># 安装node，不带版本号的话默认是安装最新版本</span></span><br><span class="line">nvm uninstall &lt;version&gt; <span class="comment"># 卸载指定的版本</span></span><br><span class="line">nvm use &lt;version&gt; <span class="comment"># 切换使用指定版本的node版本</span></span><br><span class="line">nvm list available <span class="comment"># 显示支持下载的nodejs版本号</span></span><br><span class="line">nvm node_mirror [url] <span class="comment"># 通过命令设置node镜像 默认是https://nodejs.org/dist/</span></span><br><span class="line">nvm npm_mirror [url] <span class="comment"># 设置npm镜像</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh">nvm -v <span class="hljs-comment"># 查看nvm版本</span><br>nvm list <span class="hljs-comment"># 查看已经安装的版本</span><br>nvm install &lt;version&gt; <span class="hljs-comment"># 安装node，不带版本号的话默认是安装最新版本</span><br>nvm uninstall &lt;version&gt; <span class="hljs-comment"># 卸载指定的版本</span><br>nvm use &lt;version&gt; <span class="hljs-comment"># 切换使用指定版本的node版本</span><br>nvm list available <span class="hljs-comment"># 显示支持下载的nodejs版本号</span><br>nvm node_mirror [url] <span class="hljs-comment"># 通过命令设置node镜像 默认是https://nodejs.org/dist/</span><br>nvm npm_mirror [url] <span class="hljs-comment"># 设置npm镜像</span><br></code></pre></td></tr></table></figure>
 
 
 
@@ -246,7 +249,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596103"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255804"></script>
   
 
   

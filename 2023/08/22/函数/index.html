@@ -23,16 +23,13 @@
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596173">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255869">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596173">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255869">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596173">
-        
     
 
     
@@ -41,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596173"></script>
+    <script async src="/js/app.js?v=1697508255869"></script>
     
      
 
@@ -90,14 +87,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255869"></script>
 
 
 
@@ -169,7 +172,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d1.jpg" alt="函数" loading="lazy">
+        <img src="/images/default/d4.jpg" alt="函数" loading="lazy">
         <h1>函数</h1>
     </div>
     <div class="moelj-post-meta">
@@ -187,7 +190,7 @@
     
     
 </div>
-    <h2 id="命名函数"><a href="#命名函数" class="headerlink" title="命名函数"></a>命名函数</h2><h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><h2 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 常用</span></span><br><span class="line">(<span class="keyword">function</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;xxx&#x27;</span>, a, b);</span><br><span class="line">&#125;)(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line">(<span class="keyword">function</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;2xxx&#x27;</span>, a, b);</span><br><span class="line">&#125;(<span class="number">3</span>, <span class="number">4</span>));</span><br></pre></td></tr></table></figure>
+    <h2 id="命名函数"><a href="#命名函数" class="headerlink" title="命名函数"></a>命名函数</h2><h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><h2 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 常用</span><br>(<span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;xxx&#x27;</span>, a, b);<br>&#125;)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br><br><span class="hljs-comment">// 第二种</span><br>(<span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;2xxx&#x27;</span>, a, b);<br>&#125;(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));<br></code></pre></td></tr></table></figure>
 
 
 
@@ -216,7 +219,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596105"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255805"></script>
   
 
   

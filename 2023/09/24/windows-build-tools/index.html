@@ -23,16 +23,13 @@
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596168">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255883">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596168">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255883">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596168">
-        
     
 
     
@@ -41,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596168"></script>
+    <script async src="/js/app.js?v=1697508255883"></script>
     
      
 
@@ -90,14 +87,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255883"></script>
 
 
 
@@ -169,7 +172,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d3.jpg" alt="windows-build-tools安装" loading="lazy">
+        <img src="/images/default/d5.jpg" alt="windows-build-tools安装" loading="lazy">
         <h1>windows-build-tools安装</h1>
     </div>
     <div class="moelj-post-meta">
@@ -191,12 +194,12 @@
 <li>安装nodejs-v17.9</li>
 <li>设置镜像</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://mirrors.cloud.tencent.com/npm/</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm config <span class="hljs-built_in">set</span> registry http://mirrors.cloud.tencent.com/npm/<br></code></pre></td></tr></table></figure>
 
 <ol>
 <li>安装</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g windows-build-tools</span><br><span class="line">npm install -g node-gyp</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g windows-build-tools<br>npm install -g node-gyp<br></code></pre></td></tr></table></figure>
     <span></span>
 
   </article>
@@ -221,7 +224,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596104"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255809"></script>
   
 
   

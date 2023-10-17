@@ -23,16 +23,13 @@
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596184">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255876">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596184">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255876">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596184">
-        
     
 
     
@@ -41,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596184"></script>
+    <script async src="/js/app.js?v=1697508255876"></script>
     
      
 
@@ -90,14 +87,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255876"></script>
 
 
 
@@ -169,7 +172,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d1.jpg" alt="大文件上传" loading="lazy">
+        <img src="/images/default/d3.jpg" alt="大文件上传" loading="lazy">
         <h1>大文件上传</h1>
     </div>
     <div class="moelj-post-meta">
@@ -192,15 +195,15 @@
 <p>sparkmd5。</p>
 <p>页面假死：webworker计算md5；时间分片方法</p>
 <h2 id="File相关"><a href="#File相关" class="headerlink" title="File相关"></a>File相关</h2><p>File 对象继承自 Blob 对象</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&#x27;file&#x27;</span> id=<span class="string">&quot;fileItem&quot;</span>/&gt;</span><br><span class="line"><span class="keyword">var</span> file = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fileItem&#x27;</span>).<span class="property">files</span>[<span class="number">0</span>];<span class="comment">// 可以多个文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;input type=<span class="hljs-string">&#x27;file&#x27;</span> id=<span class="hljs-string">&quot;fileItem&quot;</span>/&gt;<br><span class="hljs-keyword">var</span> file = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;fileItem&#x27;</span>).<span class="hljs-property">files</span>[<span class="hljs-number">0</span>];<span class="hljs-comment">// 可以多个文件</span><br></code></pre></td></tr></table></figure>
 
 <p>文件下载</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;result.png&quot;</span> download&gt;download&lt;/a&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;test.png&quot;</span> <span class="attr">download</span>=<span class="string">&quot;joker.png&quot;</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// fetch</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">downloadFile</span>(<span class="params">url, filename=<span class="string">&#x27;&#x27;</span></span>) &#123;</span><br><span class="line">  <span class="title function_">fetch</span>(url, &#123;</span><br><span class="line">    <span class="attr">headers</span>: <span class="keyword">new</span> <span class="title class_">Headers</span>(&#123;</span><br><span class="line">      <span class="title class_">Origin</span>: location.<span class="property">origin</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;cors&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> res.<span class="title function_">blob</span>())</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">blob</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> blobUrl = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(blob)</span><br><span class="line">      <span class="title function_">download</span>(blobUrl, filename)</span><br><span class="line">      <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">revokeObjectURL</span>(blobUrl)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">download</span>(<span class="params">href, filename = <span class="string">&#x27;&#x27;</span></span>)  &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">  a.<span class="property">download</span> = filename</span><br><span class="line">  a.<span class="property">href</span> = href</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(a)  </span><br><span class="line">  a.<span class="title function_">click</span>()</span><br><span class="line">  a.<span class="title function_">remove</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;a href=<span class="hljs-string">&quot;result.png&quot;</span> download&gt;download&lt;/a&gt;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;test.png&quot;</span> <span class="hljs-attr">download</span>=<span class="hljs-string">&quot;joker.png&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span><br><br><span class="hljs-comment">// fetch</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">downloadFile</span>(<span class="hljs-params">url, filename=<span class="hljs-string">&#x27;&#x27;</span></span>) &#123;<br>  <span class="hljs-title function_">fetch</span>(url, &#123;<br>    <span class="hljs-attr">headers</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Headers</span>(&#123;<br>      <span class="hljs-title class_">Origin</span>: location.<span class="hljs-property">origin</span>,<br>    &#125;),<br>    <span class="hljs-attr">mode</span>: <span class="hljs-string">&#x27;cors&#x27;</span>,<br>  &#125;)<br>    .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> res.<span class="hljs-title function_">blob</span>())<br>    .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">blob</span> =&gt;</span> &#123;<br>      <span class="hljs-keyword">const</span> blobUrl = <span class="hljs-variable language_">window</span>.<span class="hljs-property">URL</span>.<span class="hljs-title function_">createObjectURL</span>(blob)<br>      <span class="hljs-title function_">download</span>(blobUrl, filename)<br>      <span class="hljs-variable language_">window</span>.<span class="hljs-property">URL</span>.<span class="hljs-title function_">revokeObjectURL</span>(blobUrl)<br>    &#125;)<br>&#125;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">download</span>(<span class="hljs-params">href, filename = <span class="hljs-string">&#x27;&#x27;</span></span>)  &#123;<br>  <span class="hljs-keyword">const</span> a = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;a&#x27;</span>)<br>  a.<span class="hljs-property">download</span> = filename<br>  a.<span class="hljs-property">href</span> = href<br>  <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">appendChild</span>(a)  <br>  a.<span class="hljs-title function_">click</span>()<br>  a.<span class="hljs-title function_">remove</span>()<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>保存文本</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> downloadText = (text, filename = <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">  a.<span class="property">download</span> = filename</span><br><span class="line">  <span class="keyword">const</span> blob = <span class="keyword">new</span> <span class="title class_">Blob</span>([text], &#123;<span class="attr">type</span>: <span class="string">&#x27;text/plain&#x27;</span>&#125;)  </span><br><span class="line">  <span class="comment">// text指需要下载的文本或字符串内容</span></span><br><span class="line">  a.<span class="property">href</span> = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(blob) </span><br><span class="line">  <span class="comment">// 会生成一个类似blob:http://localhost:8080/d3958f5c-0777-0845-9dcf-2cb28783acaf 这样的URL字符串</span></span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(a)  </span><br><span class="line">  a.<span class="title function_">click</span>()</span><br><span class="line">  a.<span class="title function_">remove</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> downloadText = (text, filename = <span class="hljs-string">&#x27;&#x27;</span>) &#123;<br>  <span class="hljs-keyword">const</span> a = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;a&#x27;</span>)<br>  a.<span class="hljs-property">download</span> = filename<br>  <span class="hljs-keyword">const</span> blob = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Blob</span>([text], &#123;<span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;text/plain&#x27;</span>&#125;)  <br>  <span class="hljs-comment">// text指需要下载的文本或字符串内容</span><br>  a.<span class="hljs-property">href</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">URL</span>.<span class="hljs-title function_">createObjectURL</span>(blob) <br>  <span class="hljs-comment">// 会生成一个类似blob:http://localhost:8080/d3958f5c-0777-0845-9dcf-2cb28783acaf 这样的URL字符串</span><br>  <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">appendChild</span>(a)  <br>  a.<span class="hljs-title function_">click</span>()<br>  a.<span class="hljs-title function_">remove</span>()<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
     <span></span>
@@ -227,7 +230,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596108"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255808"></script>
   
 
   

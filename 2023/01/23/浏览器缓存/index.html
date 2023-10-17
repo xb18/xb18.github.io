@@ -27,16 +27,13 @@
 <meta name="twitter:image" content="http://xb18.github.io/images/image-20230902181915789.png">
     
 <link rel="stylesheet" href="/lib/mdui-v1.0.1/css/mdui.css">
+<link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697460596202">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697508255891">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697460596202">
+    <link rel="stylesheet" href="/css/style.css?v=1697508255891">
 
-    
-        
-            <link rel="stylesheet" href="/custom.css?v=1697460596202">
-        
     
 
     
@@ -45,7 +42,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697460596202"></script>
+    <script async src="/js/app.js?v=1697508255891"></script>
     
      
 
@@ -94,14 +91,20 @@
             
             <div class="moelj-widget-wrap">
     <div class="moelj-widget moelj-search">
-         
-            <form id="search_form" action_e="https://cn.bing.com/search?q=site:xb18.github.io" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
             </form>
          
     </div>
 </div>
 
+
+	<script async src="/js/search.js?v=1697508255891"></script>
 
 
 
@@ -233,7 +236,7 @@
 <p><img onerror="imgOnError(this);" data-zoomable data-src="/../images/image-20230902185703433.png" alt="image-20230902185703433" data-caption="image-20230902185703433" class="lazyload"></p>
 <h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>强缓存优先级大于协商缓存，即两者同时存在时，如果强缓存开启且在有效期内，则不会走协商缓存。</p>
 <h2 id="原生开发中静态资源缓存问题"><a href="#原生开发中静态资源缓存问题" class="headerlink" title="原生开发中静态资源缓存问题"></a>原生开发中静态资源缓存问题</h2><p>URL添加时间戳或者随机数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timestamp = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>(); <span class="comment">// 获取当前时间戳  Math.random() 随机数</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="string">&quot;example.com/a.js?t=&quot;</span> + timestamp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> timestamp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>().<span class="hljs-title function_">getTime</span>(); <span class="hljs-comment">// 获取当前时间戳  Math.random() 随机数</span><br><span class="hljs-keyword">var</span> url = <span class="hljs-string">&quot;example.com/a.js?t=&quot;</span> + timestamp;<br></code></pre></td></tr></table></figure>
 
 
     <span></span>
@@ -260,7 +263,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697460596112"></script>
+    <script async src="/js/copy-codeblock.js?v=1697508255812"></script>
   
 
   
