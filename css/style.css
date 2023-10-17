@@ -925,6 +925,20 @@ article.moelj-py ul li img {
 article figure.highlight {
   position: relative;
 }
+article figure.highlight > .codeblock-lang-wrapper {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 12px;
+  top: 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 9;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 article figure.highlight > .codeblock-copy-wrapper {
   position: absolute;
   width: 30px;
