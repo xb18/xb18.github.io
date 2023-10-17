@@ -26,9 +26,9 @@
 <link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697514880294">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697543823948">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697514880294">
+    <link rel="stylesheet" href="/css/style.css?v=1697543823948">
 
     
 
@@ -38,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697514880294"></script>
+    <script async src="/js/app.js?v=1697543823948"></script>
     
      
 
@@ -100,7 +100,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1697514880295"></script>
+	<script async src="/js/search.js?v=1697543823948"></script>
 
 
 
@@ -194,13 +194,13 @@
 <h2 id="界面自适应rem"><a href="#界面自适应rem" class="headerlink" title="界面自适应rem"></a>界面自适应rem</h2><p>动态计算根节点font-size大小；postcss-px2rem插件</p>
 <h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><h2 id="ios-300ms延时-点击输入框页面放大"><a href="#ios-300ms延时-点击输入框页面放大" class="headerlink" title="ios-300ms延时-点击输入框页面放大"></a>ios-300ms延时-点击输入框页面放大</h2><p>双击缩放禁用，touchend事件</p>
 <p>事件的触发顺序是touchstart -&gt; touchend -&gt; click</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>CSS的touch-action属性用于设置触摸屏用户如何操纵元素的区域，它允许移除特定元素或整个文档的触发延迟，而无需禁用缩放</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">html</span>&#123;<br>    touch-action:manipulation<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>FastClick库原理</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 业务代码</span><br><span class="hljs-keyword">var</span> $test = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;test&#x27;</span>)<br>$test.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;1 click&#x27;</span>)<br>&#125;)<br><br><span class="hljs-comment">// FastClick简单实现</span><br><span class="hljs-keyword">var</span> targetElement = <span class="hljs-literal">null</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;touchstart&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 记录点击的元素</span><br>    targetElement = event.<span class="hljs-property">target</span><br>&#125;)<br><span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;touchend&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) &#123;<br>    <span class="hljs-comment">// 阻止默认事件（屏蔽之后的click事件）</span><br>    event.<span class="hljs-title function_">preventDefault</span>()<br>    <span class="hljs-keyword">var</span> touch = event.<span class="hljs-property">changedTouches</span>[<span class="hljs-number">0</span>]<br>    <span class="hljs-comment">// 合成click事件，并添加可跟踪属性forwardedTouchEvent</span><br>    <span class="hljs-keyword">var</span> clickEvent = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createEvent</span>(<span class="hljs-string">&#x27;MouseEvents&#x27;</span>)<br>    clickEvent.<span class="hljs-title function_">initMouseEvent</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-variable language_">window</span>, <span class="hljs-number">1</span>, touch.<span class="hljs-property">screenX</span>, touch.<span class="hljs-property">screenY</span>, touch.<span class="hljs-property">clientX</span>, touch.<span class="hljs-property">clientY</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">null</span>)<br>    clickEvent.<span class="hljs-property">forwardedTouchEvent</span> = <span class="hljs-literal">true</span> <span class="hljs-comment">// 自定义的</span><br>    targetElement.<span class="hljs-title function_">dispatchEvent</span>(clickEvent)<br>&#125;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 业务代码</span><br><span class="hljs-keyword">var</span> $test = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;test&#x27;</span>)<br>$test.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;1 click&#x27;</span>)<br>&#125;)<br><br><span class="hljs-comment">// FastClick简单实现</span><br><span class="hljs-keyword">var</span> targetElement = <span class="hljs-literal">null</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;touchstart&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 记录点击的元素</span><br>    targetElement = event.<span class="hljs-property">target</span><br>&#125;)<br><span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;touchend&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) &#123;<br>    <span class="hljs-comment">// 阻止默认事件（屏蔽之后的click事件）</span><br>    event.<span class="hljs-title function_">preventDefault</span>()<br>    <span class="hljs-keyword">var</span> touch = event.<span class="hljs-property">changedTouches</span>[<span class="hljs-number">0</span>]<br>    <span class="hljs-comment">// 合成click事件，并添加可跟踪属性forwardedTouchEvent</span><br>    <span class="hljs-keyword">var</span> clickEvent = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createEvent</span>(<span class="hljs-string">&#x27;MouseEvents&#x27;</span>)<br>    clickEvent.<span class="hljs-title function_">initMouseEvent</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-variable language_">window</span>, <span class="hljs-number">1</span>, touch.<span class="hljs-property">screenX</span>, touch.<span class="hljs-property">screenY</span>, touch.<span class="hljs-property">clientX</span>, touch.<span class="hljs-property">clientY</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">null</span>)<br>    clickEvent.<span class="hljs-property">forwardedTouchEvent</span> = <span class="hljs-literal">true</span> <span class="hljs-comment">// 自定义的</span><br>    targetElement.<span class="hljs-title function_">dispatchEvent</span>(clickEvent)<br>&#125;)<br></code></pre></td></tr></table></figure>
 
 
     <span></span>
@@ -227,7 +227,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697514880221"></script>
+    <script async src="/js/copy-codeblock.js?v=1697543823881"></script>
   
 
   

@@ -18,7 +18,7 @@
 <meta property="og:description" content="room加入房间123io.on(&quot;connection&quot;, (socket) &#x3D;&gt; &amp;#123;  socket.join(&quot;some room&quot;);&amp;#125;);  广播123456io.to(&quot;room1&quot;).to(&quot;room2&quot;).to(&quot;room3&quot;).emit(&quot;som">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-12T09:17:33.895Z">
+<meta property="article:modified_time" content="2023-10-17T07:39:40.350Z">
 <meta property="article:author" content="xb18">
 <meta name="twitter:card" content="summary">
     
@@ -26,9 +26,9 @@
 <link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697514880281">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697543823930">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697514880281">
+    <link rel="stylesheet" href="/css/style.css?v=1697543823930">
 
     
 
@@ -38,7 +38,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697514880281"></script>
+    <script async src="/js/app.js?v=1697543823930"></script>
     
      
 
@@ -100,7 +100,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1697514880281"></script>
+	<script async src="/js/search.js?v=1697543823930"></script>
 
 
 
@@ -172,7 +172,7 @@
     <div class="moelj-post">
   <article>
     <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d1.jpg" alt="socket.io使用" loading="lazy">
+        <img src="/images/default/d5.jpg" alt="socket.io使用" loading="lazy">
         <h1>socket.io使用</h1>
     </div>
     <div class="moelj-post-meta">
@@ -190,13 +190,13 @@
     
     
 </div>
-    <h2 id="room"><a href="#room" class="headerlink" title="room"></a>room</h2><h3 id="加入房间"><a href="#加入房间" class="headerlink" title="加入房间"></a>加入房间</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  socket.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;some room&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+    <h2 id="room"><a href="#room" class="headerlink" title="room"></a>room</h2><h3 id="加入房间"><a href="#加入房间" class="headerlink" title="加入房间"></a>加入房间</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  socket.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;some room&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
 
-<h3 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room1&quot;</span>).<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room2&quot;</span>).<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room3&quot;</span>).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;some event&quot;</span>); <span class="hljs-comment">// 或使用io.in(&#x27;room1&#x27;)</span><br><span class="hljs-comment">// 从给定的socket广播到房间 在这种情况下，房间中除发送者之外的每个socket都会收到该事件</span><br>io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  <span class="hljs-comment">// socket.to(&quot;some room&quot;).emit(&quot;some event&quot;); // To all connected clients</span><br>  socket.<span class="hljs-property">broadcast</span>.<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;some room&quot;</span>).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;some event&quot;</span>); <span class="hljs-comment">// Except the sender</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+<h3 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room1&quot;</span>).<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room2&quot;</span>).<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;room3&quot;</span>).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;some event&quot;</span>); <span class="hljs-comment">// 或使用io.in(&#x27;room1&#x27;)</span><br><span class="hljs-comment">// 从给定的socket广播到房间 在这种情况下，房间中除发送者之外的每个socket都会收到该事件</span><br>io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  <span class="hljs-comment">// socket.to(&quot;some room&quot;).emit(&quot;some event&quot;); // To all connected clients</span><br>  socket.<span class="hljs-property">broadcast</span>.<span class="hljs-title function_">to</span>(<span class="hljs-string">&quot;some room&quot;</span>).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;some event&quot;</span>); <span class="hljs-comment">// Except the sender</span><br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <h3 id="默认房间"><a href="#默认房间" class="headerlink" title="默认房间"></a>默认房间</h3><p>Socket.IO 中的每一个<code>socket</code>都由一个随机的、不可猜测的、唯一的标识符<a target="_blank" rel="noopener" href="https://socket.io/zh-CN/docs/v4/server-socket-instance/#socketid">Socket#id</a>。为了您的方便，每个socket都会自动加入一个由其自己的 id 标识的房间。</p>
 <p>这使得实现私人消息变得容易：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  socket.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;private message&quot;</span>, <span class="hljs-function">(<span class="hljs-params">anotherSocketId, msg</span>) =&gt;</span> &#123;<br>    socket.<span class="hljs-title function_">to</span>(anotherSocketId).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;private message&quot;</span>, socket.<span class="hljs-property">id</span>, msg);<br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">io.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> &#123;<br>  socket.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;private message&quot;</span>, <span class="hljs-function">(<span class="hljs-params">anotherSocketId, msg</span>) =&gt;</span> &#123;<br>    socket.<span class="hljs-title function_">to</span>(anotherSocketId).<span class="hljs-title function_">emit</span>(<span class="hljs-string">&quot;private message&quot;</span>, socket.<span class="hljs-property">id</span>, msg);<br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 
     <span></span>
@@ -223,7 +223,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697514880216"></script>
+    <script async src="/js/copy-codeblock.js?v=1697543823874"></script>
   
 
   
