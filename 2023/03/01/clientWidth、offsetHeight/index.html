@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     
@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://xb18.github.io/2023/03/01/clientWidth%E3%80%81offsetHeight/index.html">
 <meta property="og:site_name" content="鹿酱小窝">
 <meta property="og:description" content="clientWidth clientWidth 属性是一个只读属性，它返回该元素的像素宽度，宽度包含内边距（padding），不包含边框（border），外边距（margin）和滚动条，是一个整数，单位是像素 px。 内联元素以及没有 CSS 样式的元素的 clientWidth 属性值为 0。  offsetHeight  offsetHeight 和 offsettWidth 属性返回元素的可">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xb18.github.io/images/image-20230811211224296.png">
 <meta property="og:image" content="http://xb18.github.io/images/image-20230811211230479.png">
 <meta property="article:published_time" content="2023-02-28T16:00:00.000Z">
@@ -29,19 +29,20 @@
 <link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697677210417">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697685100993">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697677210417">
+    <link rel="stylesheet" href="/css/style.css?v=1697685100993">
 
     
 
     
 <script src="/lib/mdui-v1.0.1/js/mdui.js" async></script>
 <script src="/lib/medium-zoom/medium-zoom.js" async></script>
+<script src="/lib/clipboard.js" async></script>
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697677210417"></script>
+    <script async src="/js/app.js?v=1697685100993"></script>
     
      
 
@@ -71,9 +72,9 @@
         </a>
     </div>
     <div class="moelj-count">
-        <div><span>Articles</span>20</div>
-        <div><span>Tags</span>0</div>
-        <div><span>Categories</span>0</div>
+        <div><span>文章</span>20</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>0</div>
     </div>
     <div class="moelj-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -92,7 +93,7 @@
     <div class="moelj-widget moelj-search">
         
             <form id="search_form">
-                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
                     font-size: 15px !important;
                     height: 56px !important;
                     background-image: none;
@@ -103,7 +104,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1697677210417"></script>
+	<script async src="/js/search.js?v=1697685100993"></script>
 
 
 
@@ -119,7 +120,7 @@
             
             
   <div class="moelj-widget-wrap">
-    <h3 class="moelj-widget-title">Archive</h3>
+    <h3 class="moelj-widget-title">文章归档</h3>
     <div class="moelj-widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">1</span></li></ul>
     </div>
@@ -131,7 +132,7 @@
             
             
   <div class="moelj-widget-wrap">
-    <h3 class="moelj-widget-title">Recent Posts</h3>
+    <h3 class="moelj-widget-title">最新文章</h3>
     <div class="moelj-widget">
       <ul>
         
@@ -208,14 +209,13 @@
   
       
     <div class="moelj-post-copyright">
-        <strong>Author：</strong>xb18<br>
-        <strong>Link：</strong><a href="http://xb18.github.io/2023/03/01/clientWidth%E3%80%81offsetHeight/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;</a><br>
+        <strong>本文作者：</strong>xb18<br>
+        <strong>本文链接：</strong><span class="permalink"><a href="http://xb18.github.io/2023/03/01/clientWidth%E3%80%81offsetHeight/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;03&#x2F;01&#x2F;clientWidth%E3%80%81offsetHeight&#x2F;</a></span><span class="copy-btn" title="复制链接" data-copytext="复制链接" data-copiedtext="已复制" data-clipboard-target=".moelj-post-copyright .permalink"></span><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
         
     </div>
-
 
   
   
@@ -225,16 +225,11 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1697677210334"></script>
+    <script async src="/js/copy-codeblock.js?v=1697685100924"></script>
   
-
+  <script async src="/js/post.js?v=1697685100924"></script>
   
 </div>
-<script>
-  document.addEventListener('lazyloaded', (e) => {
-    mediumZoom(e.target);
-  });
-</script>
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">
@@ -258,7 +253,7 @@
 				<input
 					class="search-input"
 					type="text"
-					placeholder="Search"
+					placeholder="搜索"
 					oninput="sinput();"
 				/>
 			</div>

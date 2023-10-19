@@ -55,36 +55,3 @@ document
 	.forEach(function (item) {
 		item.style.minHeight = item.childNodes[3].clientHeight + "px";
 	});
-
-// toc
-window.addEventListener('hashchange', (event) => {
-	onhashchange(event);
-}, true);
-
-function onhashchange (e) {
-	let {newURL, oldURL} = e;
-	const active = 'active';
-	document.querySelectorAll(`.toc-link[href="${getHash(oldURL)}"]`).forEach(elem => {
-		let classList = elem.classList;
-		if (classList.contains(active)) {
-			classList.remove(active);
-		}
-	});
-	document.querySelectorAll(`.toc-link[href="${getHash(newURL)}"]`).forEach(elem => {
-		let classList = elem.classList;
-		if (!classList.contains(active)) {
-			classList.add(active);
-		}
-	});
-}
-
-function getHash(url) {
-	return new URL(url).hash;
-}
-// 事件代理 修复点击目录地址栏不会改变bug
-document.addEventListener('click', (event) => {
-	if (event.target.className.includes('toc-link')) {
-		let href = event.target.getAttribute('href');
-		location.href = href;
-	}
-});
