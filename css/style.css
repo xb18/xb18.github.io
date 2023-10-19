@@ -1574,7 +1574,8 @@ body.mdui-drawer-body-left {
   display: block;
   color: rgba(0,0,0,0.6);
 }
-.moelj-toc a:hover {
+.moelj-toc a:hover,
+.moelj-toc a.active {
   color: #fff;
   background-color: var(--color-primary);
   box-shadow: 0 1px 10px var(--color-primary);
