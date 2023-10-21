@@ -4,21 +4,17 @@
 
 <head>
     
-    <title>textContent、innerText、innerHTML的区别和差异 - 鹿酱小窝</title>
+    <title>文章归档 - 鹿酱小窝</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/images/default/53945606.jpg" type="image/png" />
-    <meta name="description" content="textContent、innerText、innerHTML的区别和差异  textContent属性可以获取指定节点的文本及其后代节点中文本内容，也包括和元素中的内容；innerText也是获取指定节点的文本及其后代节点中文本内容，但不能获取和元素中的内容。innerHTML是获取HTML文本结构内容。 textContent会获取display:none的节点的文本；而innerText好像">
-<meta property="og:type" content="article">
-<meta property="og:title" content="textContent、innerText、innerHTML的区别和差异">
-<meta property="og:url" content="http://xb18.github.io/2023/05/16/textContent%E3%80%81innerText%E3%80%81innerHTML%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%B7%AE%E5%BC%82/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="鹿酱小窝">
+<meta property="og:url" content="http://xb18.github.io/archives/page/3/index.html">
 <meta property="og:site_name" content="鹿酱小窝">
-<meta property="og:description" content="textContent、innerText、innerHTML的区别和差异  textContent属性可以获取指定节点的文本及其后代节点中文本内容，也包括和元素中的内容；innerText也是获取指定节点的文本及其后代节点中文本内容，但不能获取和元素中的内容。innerHTML是获取HTML文本结构内容。 textContent会获取display:none的节点的文本；而innerText好像">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-08T06:22:04.624Z">
 <meta property="article:author" content="xb18">
 <meta name="twitter:card" content="summary">
     
@@ -26,9 +22,9 @@
 <link rel="stylesheet" href="/highlight/atom-one-dark.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697855836730">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1697855836751">
     
-    <link rel="stylesheet" href="/css/style.css?v=1697855836730">
+    <link rel="stylesheet" href="/css/style.css?v=1697855836751">
 
     
 
@@ -39,7 +35,7 @@
 <script src="/lib/lazysizes/lazysizes.js" async></script>
 
 
-    <script async src="/js/app.js?v=1697855836731"></script>
+    <script async src="/js/app.js?v=1697855836751"></script>
     
      
 
@@ -101,7 +97,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1697855836731"></script>
+	<script async src="/js/search.js?v=1697855836751"></script>
 
 
 
@@ -170,18 +166,22 @@
     </div>
     <div id="moelj-content">
         <div class="moelj-primary">
+    <section class="moelj-posts">
+    
     <div class="moelj-post">
-  <article>
-    <div class="moelj-post-cover absolute" style="padding-top: NaN%;"> 
-        <img src="/images/default/d4.jpg" alt="textContent、innerText、innerHTML的区别和差异" loading="lazy">
-        <h1>textContent、innerText、innerHTML的区别和差异</h1>
-    </div>
-    <div class="moelj-post-meta">
+        <a href="/2023/02/11/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E6%9D%83%E9%87%8D/">
+            <div class="moelj-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
+                <img src="/images/default/d4.jpg" alt="CSS选择器权重" loading="lazy">
+                <h1>CSS选择器权重</h1>
+            </div>
+        </a>
+
+        <div class="moelj-post-meta">
     <div class="moelj-rainbow">
-        <a class="moeljfont icon-calendar-fill">2023年05月16日</a>
+        <a class="moeljfont icon-calendar-fill">2023年02月11日</a>
         
         
-    <a><i class="moeljfont icon-areachart"></i>约235字</a>
+    <a><i class="moeljfont icon-areachart"></i>约75字</a>
     <a><i class="moeljfont icon-time-circle-fill"></i>预计需要1分钟</a>
 
     </div>
@@ -191,42 +191,105 @@
     
     
 </div>
-    <p>textContent、innerText、innerHTML的区别和差异</p>
-<ol>
-<li>textContent属性可以获取指定节点的文本及其后代节点中文本内容，也包括<script>和<style>元素中的内容；<br>innerText也是获取指定节点的文本及其后代节点中文本内容，但不能获取<script>和<style>元素中的内容。<br>innerHTML是获取HTML文本结构内容。</li>
-<li>textContent会获取display:none的节点的文本；而innerText好像会感知到节点是否呈现一样，不作返回。<br>也就是说，textContent能够获取元素的所有子节点上的文本，不管这个节点是否呈现；而innerText只返回呈现到页面上的文本。</li>
-<li>要注意设置文本时被替换的可不只是文本了；这时textContent 、innerText属性相当于innerHTML属性，会把指定节点下的所有子节点也一并替换掉。</li>
-<li>由于 innerText 受 CSS 样式的影响，它会触发重排（reflow），但 textContent 不会。</li>
-</ol>
 
-    <span></span>
-
-  </article>
-
-  
-      
-    <div class="moelj-post-copyright">
-        <strong>本文作者：</strong>xb18<br>
-        <strong>本文链接：</strong><span class="permalink"><a href="http://xb18.github.io/2023/05/16/textContent%E3%80%81innerText%E3%80%81innerHTML%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%B7%AE%E5%BC%82/" title="http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;05&#x2F;16&#x2F;textContent%E3%80%81innerText%E3%80%81innerHTML%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%B7%AE%E5%BC%82&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xb18.github.io&#x2F;2023&#x2F;05&#x2F;16&#x2F;textContent%E3%80%81innerText%E3%80%81innerHTML%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%B7%AE%E5%BC%82&#x2F;</a></span><span class="copy-btn" title="复制链接" data-copytext="复制链接" data-copiedtext="已复制" data-clipboard-target=".moelj-post-copyright .permalink"></span><br>
-        
-            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-        
+        <article>
+            
+        </article>
     </div>
 
-  
-  
-  <div class="moelj-post-meta moelj-rainbow">
-   
+    <div class="moelj-post">
+        <a href="/2023/01/23/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/">
+            <div class="moelj-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
+                <img src="/../images/image-20230902181915789.png" alt="浏览器缓存" loading="lazy">
+                <h1>浏览器缓存</h1>
+            </div>
+        </a>
+
+        <div class="moelj-post-meta">
+    <div class="moelj-rainbow">
+        <a class="moeljfont icon-calendar-fill">2023年01月23日</a>
+        
+        
+    <a><i class="moeljfont icon-areachart"></i>约1.6k字</a>
+    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要5分钟</a>
+
+    </div>
+    
+    
+    
+    
     
 </div>
-  
-  
-    <script async src="/js/copy-codeblock.js?v=1697855836632"></script>
-  
-  <script async src="/js/post.js?v=1697855836632"></script>
-  
+
+        <article>
+            
+        </article>
+    </div>
+
+    <div class="moelj-post">
+        <a href="/2023/01/12/%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E6%B8%B2%E6%9F%93/">
+            <div class="moelj-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
+                <img src="/../images/image-20230902194049379.png" alt="批量数据渲染" loading="lazy">
+                <h1>批量数据渲染</h1>
+            </div>
+        </a>
+
+        <div class="moelj-post-meta">
+    <div class="moelj-rainbow">
+        <a class="moeljfont icon-calendar-fill">2023年01月12日</a>
+        
+        
+    <a><i class="moeljfont icon-areachart"></i>约179字</a>
+    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要1分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
 </div>
+
+        <article>
+            
+        </article>
+    </div>
+
+    <div class="moelj-post">
+        <a href="/2022/03/24/vue%E8%A7%86%E5%9B%BE%E4%B8%8D%E6%9B%B4%E6%96%B0/">
+            <div class="moelj-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
+                <img src="/images/default/d2.jpg" alt="vue2视图不更新的问题" loading="lazy">
+                <h1>vue2视图不更新的问题</h1>
+            </div>
+        </a>
+
+        <div class="moelj-post-meta">
+    <div class="moelj-rainbow">
+        <a class="moeljfont icon-calendar-fill">2022年03月24日</a>
+        
+        
+    <a><i class="moeljfont icon-areachart"></i>约83字</a>
+    <a><i class="moeljfont icon-time-circle-fill"></i>预计需要1分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+        <article>
+            
+        </article>
+    </div>
+
+</section>
+
+    <nav class="moelj-page-nav">
+        <a class="extend prev" rel="prev" href="/archives/page/2/"><i class="moeljfont icon-left"></i></a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+
 </div>
         <div class="moelj-post-right">
               <div class="moelj-fixed">
